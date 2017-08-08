@@ -1,0 +1,23 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.tiny {
+  margin-right: 15px;
+}
+li {
+  padding-bottom: 5px;
+}
+form div.row {
+  margin-bottom: 0px;
+}
