@@ -18,6 +18,25 @@
 li {
   padding-bottom: 5px;
 }
-form div.row {
-  margin-bottom: 0px;
+nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.table-of-contents a {
+  color: #fff;
+  padding: 20px;
+}
+.table-of-contents a:hover {
+  padding: 20px;
+  padding-bottom: 38px;
+  color: #0d47a1;
+  border-left: none;
+  background-color: #fff;
+}
+.table-of-contents a.active {
+  padding: 20px;
+  padding-bottom: 38px;
+  color: #0d47a1;
+  font-weight: 500;
+  border-left: none;
+  background-color: #fff;
 }
