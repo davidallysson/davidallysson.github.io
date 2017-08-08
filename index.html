@@ -23,6 +23,10 @@
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
         });
+        var options = [
+          {selector: '.scrollFire', offset: 200, callback: 'Materialize.fadeInImage(".scrollFire")' },
+        ];
+        Materialize.scrollFire(options);
       </script>
   </head>
 
@@ -150,7 +154,7 @@
           <div class="col s12">
             <div class="card">
               <div class="card-image">
-                <img src="img/engecall.png">
+                <img style="opacity: 0;" class="scrollFire" src="img/engecall.png">
               </div>
               <div class="card-content">
                 <span class="card-title">Engecall</span>
