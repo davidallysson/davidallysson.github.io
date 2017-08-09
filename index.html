@@ -19,6 +19,7 @@
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="js/materialize.min.js"></script>
       <script src="js/init.js"></script>
+      <script src="js/typed.js"></script>
       <script type="text/javascript">
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
@@ -27,6 +28,15 @@
           {selector: '.scrollFire', offset: 200, callback: 'Materialize.fadeInImage(".scrollFire")' },
         ];
         Materialize.scrollFire(options);
+        $(function() {
+          $('.type').typed({
+			      strings: [
+              "Programador com ênfase em desenvolvimento web. "
+            ],
+			      typeSpeed: 40,
+            loop: false
+          })
+        })
       </script>
   </head>
 
@@ -61,7 +71,10 @@
         <br><br><br><br><br><br><br><br>
         <h1 class="header center blue-text text-darken-4">David Allysson</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Programador com ênfase em desenvolvimento web.</h5>
+          <h5 class="header col s12 light">
+            <!-- TYPED.JS -->
+            <span class="type"></span>
+          </h5>
         </div>
         <br><br><br><br><br><br><br><br>
       </div>

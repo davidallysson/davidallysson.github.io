@@ -40,3 +40,12 @@ nav ul a:hover {
   border-left: none;
   background-color: #fff;
 }
+.typed-cursor{
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+@Keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
