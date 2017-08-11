@@ -6,7 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-      <title>David Allysson - Programador Web</title>
+      <title>David Allysson - Programador</title>
 
       <!-- CSS  -->
       <link rel="icon" href="img/icon.png" />
@@ -24,10 +24,6 @@
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
         });
-        var options = [
-          {selector: '.scrollFire', offset: 200, callback: 'Materialize.fadeInImage(".scrollFire")' },
-        ];
-        Materialize.scrollFire(options);
         $(function() {
           $('.type').typed({
 			      strings: [
@@ -95,7 +91,7 @@
             <h4>David Allysson</h4>
             <h5>Desenvolvedor Web | Programador PHP</h5>
             <br>
-            <p class="light">Técnico em Informática e Graduando em Análise e Desenvolvimento de Sistemas, ambos pelo IFRN. David, além de programador web, é músico. Toca violão, piano, flauta e escaleta. Adora acampar, ler e estuda psicologia nas horas vagas.</p>
+            <p class="light">Técnico em Informática e Graduando em Análise e Desenvolvimento de Sistemas, ambos pelo IFRN. David, além de programador, é músico. Toca violão, piano, flauta e escaleta. Adora acampar, ler e estuda psicologia nas horas vagas.</p>
           </div>
         </div>
         <br><br>
@@ -151,17 +147,45 @@
     <div id="projetos" class="section scrollspy">
       <div class="container">
         <div class="row">
-          <div class="col s12">
+          <div class="col l4 m12">
             <div class="card">
               <div class="card-image">
-                <img style="opacity: 0;" class="scrollFire" src="img/engecall.png">
+                <img class="materialboxed" src="img/engecall.png">
               </div>
               <div class="card-content">
                 <span class="card-title">Engecall</span>
                 <p>Construído com o framework front-end Materialize, o site institucional da Engecall foi o meu primeiro projeto na área de desenvolvimento de sites.</p>
               </div>
               <div class="card-action">
-                <a href="http://engecall-rn.com.br" target="_blank">Link do Site</a>
+                <a href="https://github.com/davidallysson/Engecall" target="_blank">Link do Projeto</a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m12">
+            <div class="card">
+              <div class="card-image">
+                <img class="materialboxed" src="img/logica-de-programação.jpg">
+              </div>
+              <div class="card-content">
+                <span class="card-title">Lógica de Programação</span>
+                <p>Repositório de estudos contendo exercícios resolvidos em várias linguagens diferentes.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/davidallysson/logica-de-programacao" target="_blank">Link do Projeto</a>
+              </div>
+            </div>
+          </div>
+          <div class="col l4 m12">
+            <div class="card">
+              <div class="card-image">
+                <img class="materialboxed" src="img/bomberBraulio.png">
+              </div>
+              <div class="card-content">
+                <span class="card-title">BomberBraulio</span>
+                <p>Jogo desenvolvido com a linguagem Ruby e a biblioteca GOSU para a disciplina de Programação de Computadores. O projeto foi inspirado no clássico Bomberman.</p>
+              </div>
+              <div class="card-action">
+                <a href="https://github.com/davidallysson/BomberBraulio" target="_blank">Link do Projeto</a>
               </div>
             </div>
           </div>
