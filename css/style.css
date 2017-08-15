@@ -64,10 +64,17 @@ nav ul a:hover {
 .white-text {
   color: #F4F4F4 !important;
 }
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
-  color: #EF5350;
-}
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
-  color: #B71C1C;
   text-decoration: underline;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer a i {
+  color: #B71C1C;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  box-shadow: 2px 2px 2px #000;
 }
