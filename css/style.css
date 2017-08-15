@@ -1,3 +1,16 @@
+/*
+PALETA DE CORES:
+
+#1F395F - Azul Escuro
+#EF5350 - Vermelho
+#8AC9EF - Azul Bebê
+#B71C1C - Vermelho Escuro
+#F4F4F4 - Branco
+
+*/
+body {
+  background-color: #F4F4F4;
+}
 #inicio {
   padding-top: 15%;
   padding-bottom: 15%;
@@ -18,23 +31,23 @@ nav ul a:hover {
   background-color: rgba(0, 0, 0, 0);
 }
 .table-of-contents a {
-  color: #fff;
+  color: #F4F4F4;
   padding: 20px;
 }
 .table-of-contents a:hover {
   padding: 20px;
   padding-bottom: 38px;
-  color: #0d47a1;
+  color: #B71C1C;
   border-left: none;
-  background-color: #fff;
+  background-color: #F4F4F4;
 }
 .table-of-contents a.active {
   padding: 20px;
   padding-bottom: 38px;
-  color: #0d47a1;
+  color: #B71C1C;
   font-weight: 500;
   border-left: none;
-  background-color: #fff;
+  background-color: #F4F4F4;
 }
 .typed-cursor{
   opacity: 1;
@@ -44,4 +57,17 @@ nav ul a:hover {
   0% { opacity:1; }
   50% { opacity:0; }
   100% { opacity:1; }
+}
+.card {
+  min-height: 530px;
+}
+.white-text {
+  color: #F4F4F4 !important;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+  color: #EF5350;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
+  color: #B71C1C;
+  text-decoration: underline;
 }
