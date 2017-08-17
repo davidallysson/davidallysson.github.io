@@ -67,13 +67,16 @@ nav ul a:hover {
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating):hover {
   text-decoration: underline;
 }
-footer a:hover {
+a {
+  color: #B71C1C;
+}
+div a:hover, footer a:hover {
   text-decoration: underline;
 }
 footer a i {
   color: #B71C1C;
   padding: 10px;
-  margin: 10px;
+  margin: 15px;
   border-radius: 10px;
   background-color: #F4F4F4;
   box-shadow: 2px 2px 2px #000;
