@@ -81,3 +81,7 @@ footer a i {
   background-color: #F4F4F4;
   box-shadow: 2px 2px 2px #000;
 }
+/* Para corrigir bug do navbar */
+#sidenav-overlay {
+z-index: 996;
+}
