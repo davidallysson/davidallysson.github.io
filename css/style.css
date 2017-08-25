@@ -76,10 +76,16 @@ div a:hover, footer a:hover {
 footer a i {
   color: #B71C1C;
   padding: 10px;
-  margin: 15px;
+  margin: 0 15px 15px 15px;
   border-radius: 10px;
   background-color: #F4F4F4;
   box-shadow: 2px 2px 2px #000;
+}
+h5 + form div.row {
+  margin-bottom: 0;
+}
+h5 + ul {
+  margin-bottom: 0;
 }
 /* Para corrigir bug do navbar */
 #sidenav-overlay {
