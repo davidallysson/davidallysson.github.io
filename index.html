@@ -23,8 +23,22 @@
       <script src="js/init.js"></script>
       <script src="js/typed.js"></script>
       <script type="text/javascript">
+        $(window).scroll(function() {
+          if ($(window).scrollTop() >= 1 && $(window).scrollTop() < 600) {
+             $(window).scrollTop( $(window).scrollTop() + 20);
+          } else if ($(window).scrollTop() >= 620 && $(window).scrollTop() < 1200) {
+             $(window).scrollTop( $(window).scrollTop() + 20);
+          } else if ($(window).scrollTop() >= 1220 && $(window).scrollTop() < 1800) {
+             $(window).scrollTop( $(window).scrollTop() + 20);
+          } else if ($(window).scrollTop() >= 1820 && $(window).scrollTop() < 2400) {
+             $(window).scrollTop( $(window).scrollTop() + 20);
+          } else if ($(window).scrollTop() >= 2410) {
+             $(window).scrollTop( $(window).scrollTop() + 20);
+          }
+        });
         $(document).ready(function(){
           $('.scrollspy').scrollSpy();
+          $('.modal').modal();
         });
         $(function() {
           $('.type').typed({
@@ -34,9 +48,6 @@
 			      typeSpeed: 40,
             loop: false
           })
-        })
-        $(document).ready(function(){
-          $('.modal').modal();
         });
       </script>
   </head>
@@ -72,8 +83,8 @@
     </div>
 
     <!-- FIRST SECTION -->
-    <div class="section no-pad-bot">
-      <div id="inicio" class="section scrollspy container">
+    <div class="section no-pad-top no-pad-bot">
+      <div id="inicio" class="section scrollspy container-fluid">
         <h1 class="header center" style="color: #B71C1C;">David Allysson</h1>
         <div class="row center">
           <h5 class="header col s12 light">
@@ -85,11 +96,6 @@
     </div>
 
     <!-- ABOUT ME -->
-    <div class="section blue darken-4">
-      <div class="container">
-        <h3 class="header center white-text text-darken-4">Sobre Mim</h3>
-      </div>
-    </div>
 
     <div id="sobre" class="section scrollspy">
       <div class="container-fluid">
@@ -148,15 +154,8 @@
     </div>
 
     <!-- PROJECTS -->
-    <br><br>
-    <div class="section red darken-4">
-      <div class="container">
-        <h3 class="header center white-text text-darken-4">Projetos</h3>
-      </div>
-    </div>
-    <br><br>
-
-    <div id="projetos" class="section scrollspy">
+    <br>
+    <div id="projetos" class="section no-pad-bot scrollspy">
       <div class="container">
         <div class="row">
           <div class="col l4 m12">
@@ -206,26 +205,18 @@
     </div>
 
     <!-- EVENTS -->
-    <br><br>
-    <div class="section red darken-4">
-      <div class="container">
-        <h3 class="header center white-text text-darken-4">Eventos</h3>
-      </div>
-    </div>
-    <br><br>
-
     <div id="eventos" class="section scrollspy">
       <div class="container">
         <br>
         <div class="row">
-          <div class="col l8 offset-l2 s12">
+          <div class="col l6 offset-l3 s12">
             <div class="card">
               <div class="card-image">
                 <img class="materialboxed" src="img/palestra.jpg">
               </div>
               <div class="card-content">
                 <span class="card-title">Mesa Redonda - I SETIC</span>
-                <p>Evento com enfoque na área de Tecnologia da informação realizado durante os dias 25 e 27 de Maio de 2017 no Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus São Gonçalo do Amarante. A Mesa Redonda na qual fui convidado a ser um dos participantes teve como tema: "Formação, Estágio e Mercado de Trabalho".</p>
+                <p>Data: 25/05/2017 - 27/05/2017 <br> Local: IFRN - Campus São Gonçalo do Amarante <br> Tema: "Formação, Estágio e Mercado de Trabalho".</p>
               </div>
               <div class="card-action">
                 <a class="red-text text-darken-4" href="http://eventos.ifrn.edu.br/setic/" target="_blank">Link do Evento</a>
@@ -236,9 +227,16 @@
       </div>
     </div>
 
+    <div class="section">
+      <div class="container">
+        <h3 class="header center light">Vamos conversar?</h3>
+      </div>
+    </div>
+    <br>
+
     <!-- FOOTER -->
-    <footer class="page-footer red darken-4">
-      <div id="contato" class="section scrollspy container">
+    <footer class="page-footer blue darken-4">
+      <div id="contato" class="section container scrollspy">
         <div class="row">
           <!-- FORM -->
           <div class="col l6 m6 s12">
