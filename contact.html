@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+      <meta name="author" content="David Allysson">
+      <meta name="description" content="página profissional">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>David Allysson - Web Developer</title>
+      <link rel="shortcut icon" type="image/png" href="img/shortcut.png"/>
+
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+
+      <style>
+        #image {
+          width: 100%;
+          height: 400px;
+          margin: 50px;
+          background: url(img/palestra.jpg) no-repeat center center;
+          background-size: cover;
+        }
+      </style>
+
+      <!-- Scripts -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="js/materialize.min.js"></script>
+      <script src="js/init.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $(document).ready(function(){
+            $('.carousel').carousel();
+          });
+          $('.carousel.carousel-slider').carousel({fullWidth: true});
+        });
+      </script>
+  </head>
+
+  <body>
+    <nav class="nav-extended" style="background-color: #008A9A;">
+      <div class="nav-background">
+        <div class="back" style="background-image: url(img/back.png);"></div>
+      </div>
+
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Contato</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a style="border-bottom: 2px solid;" href="contact.html">Contato</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li class="active"><a href="contact.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="center center-align">
+          <div id="mainimage"></div>
+          <h3>David Allysson</h3>
+          <h5 style="padding-bottom: 75px;" class="light">Programador com ênfase em desenvolvimento web.</h5>
+        </div>
+      </div>
+
+      <div class="container-fluid" style="background-color: #008A9A;">
+        <div class="container">
+          <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#faleComigo">Fale comigo</a></li>
+              <li class="tab right"><a target="_blank" href="https://linkedin.com/in/david-allysson-527791118/"><i class="fa fa-linkedin fa-fw"></i></a></li>
+              <li class="tab right"><a target="_blank" href="http://github.com/davidallysson"><i class="fa fa-github fa-fw"></i></a></li>
+              <li class="tab right"><a target="_blank" href="http://facebook.com/david.allysson.9"><i class="fa fa-facebook fa-fw"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div id="faleComigo" class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Fale Comigo</h5>
+          <form action="https://formspree.io/davidmoreirainformatica@gmail.com" method="POST">
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="nome">Nome</label>
+                <input id="nome" name="nome" type="text" required></div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="email">Email</label>
+                <input id="email" name="_replyto" type="text" required></div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="msg" name="mensagem" class="materialize-textarea" required></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12"><button class="btn white-text text-darken-4" type="submit" value="Send" >Enviar</button></div>
+            </div>
+          </form>
+        </div>
+        <div class="col l6 s12">
+          <div id="image"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer bg-ciano">
+      <div class="container">
+        <div class="row">
+          <div class="col l3 s12">
+            <h5 class="white-text">Mapa do Site</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="index.html">Blog</a></li>
+              <li><a class="grey-text text-lighten-3" href="about.html">Sobre</a></li>
+              <li><a class="grey-text text-lighten-3" href="contact.html">Contato</a></li>
+              <li><a class="grey-text text-lighten-3" href="about.html">Mentoria</a></li>
+            </ul>
+          </div>
+          <div class="col l4 s12">
+            <h5 class="white-text">Blogs Recomendados</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://blog.da2k.com.br/">Da2k Blog</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://willianjusten.com.br/">Willian Justen</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://woliveiras.com.br/">William Oliveira</a></li>
+            </ul>
+          </div>
+          <div class="col l3 s12">
+            <h5 class="white-text">Meus Projetos</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/davidallysson/diario-de-um-programador">My Daily Log</a></li>
+              <li><a class="grey-text text-lighten-3" href="https://github.com/davidallysson/logica-de-programacao">Lógica de Programação</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 David Allysson - Desenvolvedor Web
+        <a class="grey-text text-lighten-4 right" href="https://materializecss.com">Build with Materialize.css</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -5,368 +5,113 @@
       <meta name="description" content="página profissional">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-      <title>David Allysson - Programador</title>
+      <title>David Allysson - Web Developer</title>
+      <link rel="shortcut icon" type="image/png" href="img/shortcut.png"/>
 
       <!-- CSS  -->
-      <link rel="icon" href="img/icon.png" />
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
-      <link href=' http://cdnjs.cloudflare.com/ajax/libs/devicons/1.8.0/css/devicons.min.css' rel='stylesheet'>
-      <link href="css/flag-icon.min.css" rel="stylesheet">
 
       <!-- Scripts -->
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="js/materialize.min.js"></script>
       <script src="js/init.js"></script>
-      <script src="js/typed.js"></script>
       <script type="text/javascript">
-        $(window).scroll(function() {
-          if ($(window).scrollTop() >= 1 && $(window).scrollTop() < 600) {
-             $(window).scrollTop( $(window).scrollTop() + 20);
-          } else if ($(window).scrollTop() >= 620 && $(window).scrollTop() < 1200) {
-             $(window).scrollTop( $(window).scrollTop() + 20);
-          } else if ($(window).scrollTop() >= 1220 && $(window).scrollTop() < 1800) {
-             $(window).scrollTop( $(window).scrollTop() + 20);
-          } else if ($(window).scrollTop() >= 1820 && $(window).scrollTop() < 2400) {
-             $(window).scrollTop( $(window).scrollTop() + 20);
-          } else if ($(window).scrollTop() >= 2410) {
-             $(window).scrollTop( $(window).scrollTop() + 20);
-          }
-        });
         $(document).ready(function(){
-          $('.scrollspy').scrollSpy();
-          $('.modal').modal();
-        });
-        $(function() {
-          $('.type').typed({
-			      strings: [
-              "Programador com ênfase em desenvolvimento web "
-            ],
-			      typeSpeed: 40,
-            loop: false
-          })
+          $(document).ready(function(){
+            $('.carousel').carousel();
+          });
+          $('.carousel.carousel-slider').carousel({fullWidth: true});
         });
       </script>
   </head>
 
   <body>
-    <!-- NAVBAR -->
-    <div class="navbar-fixed">
-      <nav class="blue darken-4" role="navigation">
-        <div class="nav-wrapper container">
-          <a href="#inicio" class="brand-logo">
-            <div style="width: 40px; height: 40px; border-radius: 10px; background: url(img/icon.png) no-repeat center center; background-color: #F4F4F4; background-size: 75%; margin-top: 10px; margin-bottom: 10px;"></div>
-          </a>
-          <ul class="right hide-on-med-and-down table-of-contents">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li class="active"><a href="index_en.html"><span class="flag-icon flag-icon-us"></span></a></li>
+    <nav class="nav-extended" style="background-color: #E87B2D;">
+      <div class="nav-background">
+        <div class="back" style="background-image: url(img/back.png);"></div>
+      </div>
+
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">Blog</a>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a style="border-bottom: 2px solid;" href="index.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
           </ul>
-
-          <ul id="nav-mobile" class="side-nav">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#eventos">Eventos</a></li>
-            <li><a href="#contato">Contato</a></li>
-            <li><a href="index_en.html"><span class="flag-icon flag-icon-us"></span></a></li>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="active"><a href="index.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
           </ul>
-          <a href="#" class="button-collapse" data-activates="nav-mobile"><i class="material-icons">menu</i></a>
         </div>
-      </nav>
-    </div>
 
-    <!-- FIRST SECTION -->
-    <div class="section no-pad-top no-pad-bot">
-      <div id="inicio" class="section scrollspy container-fluid">
-        <h1 class="header center" style="color: #B71C1C;">David Allysson</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">
-            <!-- TYPED.JS -->
-            <span class="type"></span>
-          </h5>
+        <div class="center center-align">
+          <div id="mainimage"></div>
+          <h3>David Allysson</h3>
+          <h5 style="padding-bottom: 75px;" class="light">Programador com ênfase em desenvolvimento web.</h5>
         </div>
       </div>
-    </div>
 
-    <!-- ABOUT ME -->
-
-    <div id="sobre" class="section scrollspy">
-      <div class="container-fluid">
-        <br>
-        <div class="row">
-          <div class="col s12 l3 offset-l1">
-            <div class="row">
-              <div class="col s12">
-                <div style="width: 200px; height: 200px; border-radius: 30px; background: url(img/me-bg.jpg) no-repeat center center; background-size: cover; margin-left: auto; margin-right: auto;"></div>
-              </div>
-              <div class="col offset-l1 s12">
-                <h4 style="color: #B71C1C;">David Allysson</h4>
-                <h5>Desenvolvedor Web | Programador PHP</h5>
-                <p class="light">Técnico em Informática e Graduando em Análise e Desenvolvimento de Sistemas, ambos pelo IFRN. David, além de programador, é músico. Toca violão, piano, flauta e escaleta. Adora acampar, viajar, ler e estuda psicologia nas horas vagas.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 l6 offset-l1">
-            <h4 class="center">Conhecimentos</h4>
-            <br><br>
-            <div class="row">
-              <div class="col s12 m6 l4">
-                <a class="waves-effect waves-light modal-trigger" href="#html"><h5>HTML <i class="devicons devicons-html5"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 85%"></div></div>
-                <h6>85%</h6>
-                <a class="waves-effect waves-light modal-trigger" href="#css"><h5>CSS <i class="devicons devicons-css3"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 55%"></div></div>
-                <h6>55%</h6>
-                <a class="waves-effect waves-light modal-trigger" href="#js"><h5>JavaScript <i class="devicons devicons-javascript_badge"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 20%"></div></div>
-                <h6>20%</h6>
-              </div>
-              <div class="col s12 m6 l4">
-                <a class="waves-effect waves-light modal-trigger" href="#php"><h5>PHP <i class="devicons devicons-php"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 40%"></div></div>
-                <h6>40%</h6>
-                <a class="waves-effect waves-light modal-trigger" href="#sql"><h5>MySQL <i class="devicons devicons-mysql"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 35%"></div></div>
-                <h6>35%</h6>
-                <a class="waves-effect waves-light modal-trigger" href="#ruby"><h5>Ruby <i class="devicons devicons-ruby"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 20%"></div></div>
-                <h6>20%</h6>
-              </div>
-              <div class="col s12 m6 l4">
-                <a class="waves-effect waves-light modal-trigger" href="#materialize"><h5>Materialize <i class="devicons devicons-materializecss"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 40%"></div></div>
-                <h6>40%</h6>
-                <a class="waves-effect waves-light modal-trigger" href="#git"><h5>Git <i class="devicons devicons-git"></i></h5></a>
-                <div class="progress red lighten-2"><div class="determinate red darken-4" style="width: 45%"></div></div>
-                <h6>45%</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- PROJECTS -->
-    <br>
-    <div id="projetos" class="section no-pad-bot scrollspy">
-      <div class="container">
-        <div class="row">
-          <div class="col l4 m12">
-            <div class="card">
-              <div class="card-image">
-                <img class="materialboxed" src="img/engecall.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Engecall</span>
-                <p>Construído com o framework front-end Materialize, o site institucional da Engecall foi o meu primeiro projeto na área de desenvolvimento de sites.</p>
-              </div>
-              <div class="card-action">
-                <a class="red-text text-darken-4" href="https://github.com/davidallysson/Engecall" target="_blank">Link do Projeto</a>
-              </div>
-            </div>
-          </div>
-          <div class="col l4 m12">
-            <div class="card">
-              <div class="card-image">
-                <img class="materialboxed" src="img/logica-de-programação.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Lógica de Programação</span>
-                <p>Repositório de estudos contendo exercícios de lógica de programação resolvidos em várias linguagens, como C, Java, PHP, Python e Ruby.</p>
-              </div>
-              <div class="card-action">
-                <a class="red-text text-darken-4" href="https://github.com/davidallysson/logica-de-programacao" target="_blank">Link do Projeto</a>
-              </div>
-            </div>
-          </div>
-          <div class="col l4 m12">
-            <div class="card">
-              <div class="card-image">
-                <img class="materialboxed" src="img/bomberBraulio.png">
-              </div>
-              <div class="card-content">
-                <span class="card-title">BomberBraulio</span>
-                <p>Jogo desenvolvido em Ruby para a disciplina de Programação de Computadores. O projeto foi inspirado no clássico Bomberman.</p>
-              </div>
-              <div class="card-action">
-                <a class="red-text text-darken-4" href="https://github.com/davidallysson/BomberBraulio" target="_blank">Link do Projeto</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- EVENTS -->
-    <div id="eventos" class="section scrollspy">
-      <div class="container">
-        <br>
-        <div class="row">
-          <div class="col l6 offset-l3 s12">
-            <div class="card">
-              <div class="card-image">
-                <img class="materialboxed" src="img/palestra.jpg">
-              </div>
-              <div class="card-content">
-                <span class="card-title">Mesa Redonda - I SETIC</span>
-                <p>Data: 25/05/2017 - 27/05/2017 <br> Local: IFRN - Campus São Gonçalo do Amarante <br> Tema: "Formação, Estágio e Mercado de Trabalho".</p>
-              </div>
-              <div class="card-action">
-                <a class="red-text text-darken-4" href="http://eventos.ifrn.edu.br/setic/" target="_blank">Link do Evento</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="section">
-      <div class="container">
-        <h3 class="header center light">Vamos conversar?</h3>
-      </div>
-    </div>
-    <br>
-
-    <!-- FOOTER -->
-    <footer class="page-footer blue darken-4">
-      <div id="contato" class="section container scrollspy">
-        <div class="row">
-          <!-- FORM -->
-          <div class="col l6 m6 s12">
-            <h5 class="white-text">Fale Comigo</h5>
-            <form action="https://formspree.io/davidmoreirainformatica@gmail.com" method="POST">
-              <div class="row">
-                <div class="input-field col s6"><input placeholder="Nome" id="nome" name="nome" type="text" required></div>
-                <div class="input-field col s6"><input placeholder="Email" id="email" name="_replyto" type="text" required></div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12"><textarea id="msg" name="mensagem" placeholder="Mensagem" class="materialize-textarea" required></textarea></div>
-              </div>
-              <div class="row">
-                <div class="input-field col s12"><button class="btn white red-text text-darken-4 waves-effect waves-red" type="submit" value="Send" >Enviar</button></div>
-              </div>
-            </form>
-          </div>
-          <!-- CONTATO -->
-          <div class="col l4 offset-l2 m5 offset-m1 s12 ">
-            <h5 class="white-text">Contato</h5>
-            <ul>
-              <li><i class="tiny material-icons">location_on</i>Natal - RN</li>
-              <li><i class="tiny material-icons">settings_cell</i>(84) 98776 - 5436</li>
-              <li><i class="tiny material-icons">email</i>davidmoreirainformatica@gmail.com</li>
-              <br><br>
-            </ul>
-          </div>
-
-          <!-- SOCIAL MEDIA -->
-          <div class="col l4 offset-l2 m5 offset-m1 s12">
-            <ul>
-              <li style="display: inline;"><a class="white-text" target="_blank" href="http://facebook.com/david.allysson.9"><i class="fa fa-facebook fa-3x fa-fw"></i></a></li>
-              <li style="display: inline;"><a class="white-text" target="_blank" href="http://github.com/davidallysson"><i class="fa fa-github fa-3x fa-fw"></i></a></li>
-              <li style="display: inline;"><a class="white-text" target="_blank" href="https://linkedin.com/in/david-allysson-527791118/"><i class="fa fa-linkedin fa-3x fa-fw"></i></a></li>
+      <div class="container-fluid" style="background-color: #E87B2D;">
+        <div class="container">
+          <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#test1">All</a></li>
+              <li class="tab hide-on-med-and-down"><a href="#test2">#dev</a></li>
+              <li class="tab hide-on-med-and-down"><a href="#test3">#database</a></li>
+              <li class="tab hide-on-med-and-down"><a href="#test4">#management</a></li>
+              <li class="tab hide-on-med-and-down"><a href="#test5">#events</a></li>
+              <li class="tab right"><a target="_blank" href="https://linkedin.com/in/david-allysson-527791118/"><i class="fa fa-linkedin fa-fw"></i></a></li>
+              <li class="tab right"><a target="_blank" href="http://github.com/davidallysson"><i class="fa fa-github fa-fw"></i></a></li>
+              <li class="tab right"><a target="_blank" href="http://facebook.com/david.allysson.9"><i class="fa fa-facebook fa-fw"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
-      <!-- COPYRIGHT -->
-      <div class="footer-copyright">
-        <div class="container">Made by David Allysson with <a class="grey-text text-lighten-4" target="_blank" href="http://materializecss.com">Materialize</a></div>
-      </div>
-    </footer>
+    </nav>
+    <br>
+    <div id="test1" class="container">
+      <div class="row">
+        <div class="col l4 m6 s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/marketing-trends-hero.jpg?v=1499258623">
+            </div>
+            <div class="card-content">
+              <a class="laranja" href="#"><span class="card-title">Mochilando pela Web</span></a> Um guia que todo desenvolvedor iniciante deveria ler.
+            </div>
+          </div>
+        </div>
 
-    <div id="html" class="modal">
-      <div class="modal-content">
-        <h5>Afinal, o que é HTML?</h5>
-        <br>
-        <p>HTML é uma das linguagens que utilizamos para desenvolver websites. É considerada o esqueleto do site. O acrônimo HTML vem do inglês e significa, em português, Linguagem de Marcação de Hipertexto. Todo documento HTML possui marcadores - do inglês: "tags" - e são com eles que estabelecemos estruturas dentro da página.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
+        <div class="col l4 m6 s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://cdn.shopify.com/s/files/1/0788/9687/files/mac-computer-on-desk_4460x4460edit.jpg?v=1505757830">
+            </div>
+            <div class="card-content">
+              <a class="laranja" href="#"><span class="card-title">O Segredo do Sucesso</span></a> O que todas as mentes brilhantes não querem que você saiba!
+            </div>
+          </div>
+        </div>
+
+        <div class="col l4 m6 s12">
+          <div class="card">
+            <div class="card-image">
+              <img src="https://cdn.shopify.com/s/files/1/0788/9687/files/1-como_esvrever_um_artigo.jpg?17499375587190995309">
+            </div>
+            <div class="card-content">
+              <a class="laranja" href="#"><span class="card-title">Devo Criar meu Blog?</span></a> 5 dicas para você começar exatamente agora!
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
-    <div id="css" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é CSS?</h4>
-        <br>
-        <p>O CSS - em português, Folhas de Estilos em Cascata - é uma linguagem utilizada para definir a aparência de elementos definidos com o HTML. É essa linguagem que define todo o design e toda a beleza do seu website, chamada de "estilo". Sua maior vantagem é efetuar a separação entre o formato e o conteúdo de um documento.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="js" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é JavaScript?</h4>
-        <br>
-        <p>JavaScript é uma linguagem de programação utilizada para controlar o HTML e o CSS para manipular comportamentos na página. Esses comportamentos englobam eventos, animações e tudo que pode tornar o site mais dinâmico. </p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="php" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é PHP?</h4>
-        <br>
-        <p>PHP é uma linguagem que permite criar websites dinâmicos, possibilitando uma interação com o usuário através de formulários, parâmetros da URL e links. A diferença de PHP com relação a linguagens como Javascript é que o código PHP é executado no servidor (server-side). Desta maneira é possível interagir com bancos de dados e aplicações existentes no servidor, com  a vantagem de não expor o código fonte para o cliente. Isso é extremamente útil quando o programa está lidando com senhas ou qualquer tipo de informação confidencial.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="sql" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é SQL?</h4>
-        <br>
-        <p>SQL significa, em Português, Linguagem de Consulta Estruturada, ou seja, é uma linguagem padrão de gerenciamento de dados que interage com os principais bancos de dados baseados no modelo relacional. É com ela que consulto, altero e salvo informações do site/sistema que construo. Com ela, por exemplo, é possível cadastrar todos os produtos de sua loja.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="ruby" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é Ruby?</h4>
-        <br>
-        <p>Ruby é uma linguagem de programação interpretada, orientada a objetos e é utilizada do lado servidor (server-side) - traduzindo em outras palavras: é poderosa, ágil e flexível. É responsável por realizar todos os cálculos e comandos necessários para se desenvolver um sistema, um blog, um site comercial e afins.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="materialize" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é Materialize?</h4>
-        <br>
-        <p>O Materialize é uma ferramenta (framework) desenvolvida para facilitar e agilizar o desenvolvimento quando o assunto é design. Integrando HTML, CSS e JS, é possível, com ele, aplicar no seu site o moderno "Material Design" - que é uma linguagem de Design desenvolvida pela Google recentemente.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
-
-    <div id="git" class="modal">
-      <div class="modal-content">
-        <h4>Afinal, o que é Git?</h4>
-        <br>
-        <p>Git é um sistema de controle de versão de arquivos. Através dele é possível desenvolver projetos no qual diversas pessoas podem contribuir simultaneamente, editando e criando novos arquivos e permitindo que eles possam existir sem o risco de suas alterações serem sobrescritas. Em poucas palavras, com o Git é possível trabalhar em grupo em um mesmo projeto e desenvolvê-lo em versões.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Fechar</a>
-      </div>
-    </div>
   </body>
 </html>

@@ -1,2 +1,2 @@
 ## [David Allysson - Developer](http://davidallysson.github.io)
-Site profissional hospedado no Github Pages.
+Blog pessoal hospedado no Github Pages.
