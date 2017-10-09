@@ -1,14 +1,26 @@
 .roxo {
   color: #863B8D; }
 
+.laranja {
+  color: #E87B2D; }
+
+.bg-lilas {
+  background-color: #BB99C2; }
+
+.bg-roxo {
+  background-color: #863B8D; }
+
 .bg-medium {
   background-color: #5E4A8C; }
 
 .bg-ciano {
   background-color: #008A9A; }
 
-.laranja {
-  color: #E87B2D; }
+.bg-laranja {
+  background-color: #E87B2D; }
+
+.bg-white {
+  background-color: white; }
 
 #sobreMim a {
   font-weight: bolder; }
