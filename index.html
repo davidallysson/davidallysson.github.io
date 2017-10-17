@@ -18,17 +18,10 @@
       <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script src="js/materialize.min.js"></script>
       <script src="js/init.js"></script>
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $(document).ready(function(){
-            $('.carousel').carousel();
-          });
-          $('.carousel.carousel-slider').carousel({fullWidth: true});
-        });
-      </script>
+
   </head>
 
-  <body>
+  <body style="background-color: rgba(232, 123, 45, 0.06);">
     <nav class="nav-extended" style="background-color: #E87B2D;">
       <div class="nav-background">
         <div class="back" style="background-image: url(img/back.png);"></div>
@@ -76,19 +69,36 @@
     </nav>
     <br>
     <div id="test1" class="container">
+      <br>
       <div class="row">
         <div class="col s12">
-          <h2 class="header">Em destaque</h2>
-          <div class="card horizontal">
+          <div class="card hoverable hide-on-large-only">
             <div class="card-image">
-              <img src="https://lorempixel.com/170/225/nature/6">
+              <img class="responsive-img" src="img/01.jpg">
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <a class="laranja" href="#"><span class="card-title">Título do Post</span></a>
-                <p>I am a very simple card. I am good at containing small bits of information.</p>
+                <a class="laranja" href="#"><span class="card-title">Arquiteturas CSS</span></a>
+                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
                 <br>
-                <div class="chip">#dev</div> <div class="chip">#frontend</div>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
+              </div>
+              <div class="card-action">
+                <a href="#">Leia Mais</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hoverable horizontal hide-on-med-and-down">
+            <div class="card-image">
+              <img class="responsive-img" src="img/01.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <a class="laranja" href="#"><span class="card-title">Arquiteturas CSS</span></a>
+                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
+                <br>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
               </div>
               <div class="card-action">
                 <a href="#">Leia Mais</a>
@@ -97,41 +107,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col l4 m6 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://cdn.shopify.com/s/files/1/0070/7032/files/marketing-trends-hero.jpg?v=1499258623">
-            </div>
-            <div class="card-content">
-              <a class="laranja" href="#"><span class="card-title">Mochilando pela Web</span></a> Um guia que todo desenvolvedor iniciante deveria ler.
-            </div>
-          </div>
-        </div>
-
-        <div class="col l4 m6 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://cdn.shopify.com/s/files/1/0788/9687/files/mac-computer-on-desk_4460x4460edit.jpg?v=1505757830">
-            </div>
-            <div class="card-content">
-              <a class="laranja" href="#"><span class="card-title">O Segredo do Sucesso</span></a> O que todas as mentes brilhantes não querem que você saiba!
-            </div>
-          </div>
-        </div>
-
-        <div class="col l4 m6 s12">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://cdn.shopify.com/s/files/1/0788/9687/files/1-como_esvrever_um_artigo.jpg?17499375587190995309">
-            </div>
-            <div class="card-content">
-              <a class="laranja" href="#"><span class="card-title">Devo Criar meu Blog?</span></a> 5 dicas para você começar exatamente agora!
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <br><br>
     </div>
 
   </body>
