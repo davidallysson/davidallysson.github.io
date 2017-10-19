@@ -11,7 +11,7 @@
       <!-- CSS  -->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-      <link href="css/main.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
       <link href="css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
 
       <!-- Scripts -->
@@ -21,8 +21,8 @@
 
   </head>
 
-  <body style="background-color: rgba(232, 123, 45, 0.06);">
-    <nav class="nav-extended" style="background-color: #E87B2D;">
+  <body>
+    <nav class="nav-extended bg-ciano">
       <div class="nav-background">
         <div class="back" style="background-image: url(img/back.png);"></div>
       </div>
@@ -50,15 +50,15 @@
         </div>
       </div>
 
-      <div class="container-fluid" style="background-color: #E87B2D;">
+      <div class="container-fluid bg-ciano">
         <div class="container">
           <div class="nav-content">
             <ul class="tabs tabs-transparent">
-              <li class="tab"><a class="active" href="#test1">All</a></li>
-              <li class="tab hide-on-med-and-down"><a href="#test2">#dev</a></li>
+              <li class="tab"><a class="active" href="#posts">Posts</a></li>
+              <!-- <li class="tab hide-on-med-and-down"><a href="#test2">#dev</a></li>
               <li class="tab hide-on-med-and-down"><a href="#test3">#database</a></li>
               <li class="tab hide-on-med-and-down"><a href="#test4">#management</a></li>
-              <li class="tab hide-on-med-and-down"><a href="#test5">#events</a></li>
+              <li class="tab hide-on-med-and-down"><a href="#test5">#events</a></li> -->
               <li class="tab right"><a target="_blank" href="https://linkedin.com/in/david-allysson-527791118/"><i class="fa fa-linkedin fa-fw"></i></a></li>
               <li class="tab right"><a target="_blank" href="http://github.com/davidallysson"><i class="fa fa-github fa-fw"></i></a></li>
               <li class="tab right"><a target="_blank" href="http://facebook.com/david.allysson.9"><i class="fa fa-facebook fa-fw"></i></a></li>
@@ -67,48 +67,95 @@
         </div>
       </div>
     </nav>
+
     <br>
-    <div id="test1" class="container">
+    <div id="posts" class="container">
       <br>
       <div class="row">
         <div class="col s12">
           <div class="card hoverable hide-on-large-only">
             <div class="card-image">
-              <img class="responsive-img" src="img/01.jpg">
+              <img class="responsive-img" src="img/posts/02.jpg">
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <a class="laranja" href="#"><span class="card-title">Arquiteturas CSS</span></a>
-                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
+                <a class="ciano" href="#"><span class="card-title">Automatizando Tarefas com Gulp</span></a>
+                <p>Uma das melhores e mais eficientes ferramentas para front-end dos últimos anos.</p>
                 <br>
-                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#task</div> <div class="chip">#runners</div> <div class="chip">#gulp</div>
               </div>
               <div class="card-action">
-                <a href="#">Leia Mais</a>
+                <a href="#">Em Breve</a>
               </div>
             </div>
           </div>
 
           <div class="card hoverable horizontal hide-on-med-and-down">
             <div class="card-image">
-              <img class="responsive-img" src="img/01.jpg">
+              <img class="responsive-img" src="img/posts/02.jpg">
             </div>
             <div class="card-stacked">
               <div class="card-content">
-                <a class="laranja" href="#"><span class="card-title">Arquiteturas CSS</span></a>
-                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
+                <a class="ciano" href="#"><span class="card-title">Automatizando Tarefas com Gulp</span></a>
+                <p>Uma das melhores e mais eficientes ferramentas para front-end dos últimos anos.</p>
                 <br>
-                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#task</div> <div class="chip">#runners</div> <div class="chip">#gulp</div>
               </div>
               <div class="card-action">
-                <a href="#">Leia Mais</a>
+                <a href="#">Em Breve</a>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <br>
+      <!-- <div class="row">
+        <div class="col s12">
+          <div class="card hoverable hide-on-large-only">
+            <div class="card-image">
+              <img class="responsive-img" src="img/posts/01.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <a class="ciano" href="#"><span class="card-title">Arquiteturas CSS</span></a>
+                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
+                <br>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
+              </div>
+              <div class="card-action">
+                <a href="#">Em Breve</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card hoverable horizontal hide-on-med-and-down">
+            <div class="card-image">
+              <img class="responsive-img" src="img/posts/01.jpg">
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <a class="ciano" href="#"><span class="card-title">Arquiteturas CSS</span></a>
+                <p>Técnicas para a construção de um CSS mais limpo e escalável.</p>
+                <br>
+                <div class="chip">#dev</div> <div class="chip">#frontend</div> <div class="chip">#smacss</div> <div class="chip">#bem</div> <div class="chip">#oocss</div>
+              </div>
+              <div class="card-action">
+                <a href="#">Em Breve</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
       <br><br>
     </div>
 
+    <footer class="page-footer bg-ciano">
+      <div class="footer-copyright">
+        <div class="container">
+        © 2017 David Allysson - Desenvolvedor Web
+        <a class="grey-text text-lighten-4 right" href="https://materializecss.com">Materialize.css</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
