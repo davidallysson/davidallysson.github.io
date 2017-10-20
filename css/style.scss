@@ -52,7 +52,7 @@ nav {
   margin: 25px auto;
   background: url(../img/me-bg.jpg) no-repeat center center;
   background-size: cover;
-  @include border-radius(70px);
+  @include border-radius(50%);
 }
 
 ol {

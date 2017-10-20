@@ -16,6 +16,6 @@ gulp.task('html', function() {
 
 gulp.task('watch', function() {
   livereload.listen();
-  gulp.watch('*.html', ['html']);
+  gulp.watch('**/*.html', ['html']);
   gulp.watch('css/*.{sass,scss}', ['scss'] );
 });

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+      <meta name="author" content="David Allysson">
+      <meta name="description" content="blog pessoal">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <title>David Allysson - Web Developer</title>
+      <link rel="shortcut icon" type="image/png" href="../img/shortcut.png"/>
+
+      <!-- CSS  -->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link href="../css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+      <link href="../css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+      <link href="../css/prism.css" type="text/css" rel="stylesheet"/>
+
+      <!-- Scripts -->
+      <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script src="../js/materialize.min.js"></script>
+      <script src="../js/prism.js"></script>
+      <script src="../js/init.js"></script>
+
+  </head>
+
+  <body>
+    <nav class="nav-extended">
+      <div class="nav-background">
+        <div class="back" style="background: url(../img/posts/02.jpg) center fixed;"></div>
+      </div>
+
+      <div class="container">
+        <div class="nav-wrapper">
+          <span class="brand-logo"> Post </span>
+          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="../index.html">Blog</a></li>
+            <li><a href="../about.html">Sobre</a></li>
+            <li><a href="../contact.html">Contato</a></li>
+          </ul>
+          <ul class="side-nav" id="mobile-demo">
+            <li class="active"><a href="index.html">Blog</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="contact.html">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="center center-align">
+          <h3 style="padding-top: 230px;">Automatizando Tarefas com Gulp</h3>
+          <h5 style="padding-bottom: 230px;" class="light">Uma das melhores e mais eficientes ferramentas para front-end dos últimos anos.</h5>
+        </div>
+      </div>
+
+    </nav>
+
+    <br>
+    <div class="container">
+      <br>
+      <div class="row">
+        <div class="col s12 m10 offset-m1">
+          <p class="light">Três anos atrás, quando comecei a aprender HTML e CSS, jamais imaginava que algo como um Automatizador de Tarefas poderia existir. Task Runners - como eles são chamados no mundo real - são uma das melhores ferramentas para desenvolvedores e levam a produtividade a um outro nível. Recentemente tive um contato inicial com Gulp e fiquei tão apaixonado pela ferramenta que senti que precisava escrever sobre.</p>
+          <br>
+          <h3>Introdução</h3>
+          <p class="light">É muito comum que nós, desenvolvedores, façamos tarefas repetitivas ao iniciar projetos ou mesmo durante todo o ciclo de desenvolvimento. Compilar SASS para CSS, por exemplo, é uma tarefa recorrente, tendo de ser executada a todo momento. Task Runners são ferramentas que se destinam a automatizar tarefas variadas que acontecem em determinados momentos do desenvolvimento.</p>
+          <p class="light">Eles permitem que tarefas sejam criadas e possam ser chamadas e executadas através da linha de comando, além de ficarem rodando em background, esperando apenas que você salve determinado tipo de arquivo, para dar início à uma série de instruções automatizadas, previamente programadas.</p>
+          <p class="light">Nesse artigo, vou mostrar para vocês como o Gulp está sendo aplicado por mim aqui no blog e como vocês podem aplica-lo no projeto de vocês.</p>
+          <br>
+          <h3>Instalando o Gulp</h3>
+          <p class="light">Gulp é JavaScript com Node. A primeira coisa que você precisará instalar para poder utilizar o Gulp é o <a href="https://nodejs.org">Node JS</a>. O próximo passo é instalar o Gulp globalmente no sistema. Abra a linha de comando do Node.JS e execute: </p>
+          <pre><code class="language-bash">npm install -g gulp</code></pre>
+          <p class="light">Já que estamos lidando com Node, um arquivo package.json na raiz do projeto deve ser criado para idicar quais módulos serão usados. Vamos inicializar nosso projeto como um projeto Node.js com:</p>
+          <pre><code class="language-bash">npm init</code></pre>
+          <p class="light">Um prompt interativo lhe fará várias perguntas a respeito do projeto, tais como: nome, versão, descrição, licença, autor, etc. Por último, vamos adicionar o Gulp como um dos módulos do nosso projeto:</p>
+          <pre><code class="language-bash">npm install --save-dev gulp</code></pre>
+          <p class="light">Feitas as devidas configurações, vamos nos divertir com tudo que o Gulp nos proporciona!</p>
+          <br>
+          <h3>Entendendo o gulpfile.js</h3>
+          <p class="light">Todo projeto que utiliza Gulp possui um gulpfile.js. Nesse arquivo, que também deve ficar na raiz do projeto, é onde os scripts automatizados das tarefas estão escritos. É aqui que os comandos sobre o que fazer e como fazer são passados para o Gulp. Aqui embaixo está o arquivo gulpfile.js do meu blog. Vou explicar o código por partes: </p>
+          <script src="https://gist.github.com/davidallysson/8a2617012c1b8d4545a9b56f72215f8f.js"></script>
+          <p class="light">O Gulp possui vários módulos para automatizar várias tarefas diferentes. Todos eles requerem o módulo 'gulp'. Estou utilizando quatro módulos atualimente: o do Gulp, um para converter SASS para CSS, um para minificar CSS e um para LiveReload (sobre esse aqui vou falar mais a frente). Vamos instalar todos eles para podermos utiliza-los com o Gulp. Para isso execute:</p>
+          <pre><code class="language-bash">npm install --save-dev gulp-ruby-sass gulp-minify-css gulp-livereload</code></pre>
+          <p class="light">Após instalados, nosso primeiro passo no gulpfile.js será carregar os módulos no nosso código:</p>
+          <pre><code class="language-javascript">var gulp = require('gulp'),
+    sass = require('gulp-ruby-sass'),
+    minifycss = require('gulp-minify-css'),
+    livereload = require('gulp-livereload');</code></pre>
+          <p class="light">Vamos criar nossa primeira tarefa automatizada com o Gulp. Nossa task se chamará <b>scss</b> e sua função será converter SASS para CSS, minificar o CSS e trazer a alteração feita no código .scss em tempo real para nós (vamos usar o LiveReload para isso).</p>
+          <p class="light">Dentro da função <b>sass()</b> colocamos o diretório aonde nosso código <b>.scss</b> ou <b>.sass</b> está. No meu caso, o código está em dentro da pasta <b>css</b> e o nome do arquivo é <b>style.scss</b>. A próxima linha pegará o CSS convertido e irá minificá-lo. A terceira linha da função fará com que o arquivo<b>.css</b> seja salvo dentro da minha pasta <b>css</b>. A última linha da task fará com que a página seja recarregada automaticamente. Para isso você precisa estar utilizando o navegador Google Chrome e precisa instalar a extensão do <a href="https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei">LiveReload</a>. Nossa task ficou assim: </p>
+          <pre><code class="language-javascript">gulp.task('scss', function() {
+      sass('css/style.scss').on('error', sass.logError)
+      .pipe(minifycss())
+      .pipe(gulp.dest('css'))
+      .pipe(livereload());
+    });</code></pre>
+          <p class="light">Nosso próximo passo agora será criar nossa tarefa principal: a tarefa <b>watch</b>. Ela será responsável por ativar o LiveReload e por observar todos os arquivos <b>.sass</b> ou <b>.scss</b> dentro da pasta <b>css</b>. Quando esses arquivos forem modificados e salvos, o gulp invocará a task <b>scss</b> criada anteriormente.</p>
+          <pre><code class="language-javascript">gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('css/*.{sass,scss}', ['scss'] );
+});</code></pre>
+          <p class="light">Salve o seu gulpfile.js e vamos ver a mágica acontecendo! Abra o terminal, caminhe até a pasta do projeto e execute a tarefa <b>watch</b>:</p>
+          <pre><code class="language-bash">gulp watch</code></pre>
+          <blockquote>
+            <p class="light">O padrão de execução das tasks é gulp <b>nome_da_task</b>. Caso o nome da task seja <b>default</b> não é necessário colocar o seu nome após o comando gulp.</p>
+          </blockquote>
+          <p class="light">Se tudo tiver executado corretamente ative a extensão LiveReload no seu Google Chrome. Experimente agora alterar o seu arquivo <b>.sass</b> ou <b>.scss</b> e veja a mágica!</p>
+          <br>
+          <h3>Automatize++</h3>
+          <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <br>
+        </div>
+      </div>
+      <br><br>
+    </div>
+
+    <footer class="page-footer">
+      <div class="footer-copyright">
+        <div class="container">
+          © 2017 David Allysson - Desenvolvedor Web
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
