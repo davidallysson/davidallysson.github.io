@@ -74,6 +74,16 @@
           <pre><code class="language-bash">npm install --save-dev gulp</code></pre>
           <p class="light">Feitas as devidas configurações, vamos nos divertir com tudo que o Gulp nos proporciona!</p>
           <br>
+          <blockquote>
+            <p class="light">Enquanto estudava Gulp acabei dando de cara com vários códigos antigos que acabaram não funcionando no meu projeto. Isso aconteceu graças as atualizações que o Gulp e os módulos receberam com o passar do tempo. Vou colocar aqui todas as versões dos módulos que estou utilizando, ou seja, garanto que, para essas versões, esse tutorial funcionará!</p>
+          </blockquote>
+            <pre><code class="language-javascript">"devDependencies": {
+  "gulp": "^3.9.1",
+  "gulp-livereload": "^3.8.1",
+  "gulp-minify-css": "^1.2.4",
+  "gulp-ruby-sass": "^2.1.1",
+}</code></pre>
+          <br>
           <h3>Entendendo o gulpfile.js</h3>
           <p class="light">Todo projeto que utiliza Gulp possui um gulpfile.js. Nesse arquivo, que também deve ficar na raiz do projeto, é onde os scripts automatizados das tarefas estão escritos. É aqui que os comandos sobre o que fazer e como fazer são passados para o Gulp. Aqui embaixo está o arquivo gulpfile.js do meu blog. Vou explicar o código por partes: </p>
           <script src="https://gist.github.com/davidallysson/8a2617012c1b8d4545a9b56f72215f8f.js"></script>
@@ -97,17 +107,44 @@
   livereload.listen();
   gulp.watch('css/*.{sass,scss}', ['scss'] );
 });</code></pre>
-          <p class="light">Salve o seu gulpfile.js e vamos ver a mágica acontecendo! Abra o terminal, caminhe até a pasta do projeto e execute a tarefa <b>watch</b>:</p>
+          <p class="light">Salve o seu gulpfile.js e vamos ver a mágica acontecendo! Abra o terminal, caminhe até a pasta do projeto e execute a tarefa <b>watch</b>. Se tudo tiver executado corretamente ative a extensão LiveReload no seu Google Chrome. Experimente agora alterar o seu arquivo <b>.sass</b> ou <b>.scss</b> e, após salvar, veja a mágica! Incrível, não?</p>
           <pre><code class="language-bash">gulp watch</code></pre>
           <blockquote>
             <p class="light">O padrão de execução das tasks é gulp <b>nome_da_task</b>. Caso o nome da task seja <b>default</b> não é necessário colocar o seu nome após o comando gulp.</p>
           </blockquote>
-          <p class="light">Se tudo tiver executado corretamente ative a extensão LiveReload no seu Google Chrome. Experimente agora alterar o seu arquivo <b>.sass</b> ou <b>.scss</b> e veja a mágica!</p>
+          <p class="light"></p>
           <br>
-          <h3>Automatize++</h3>
-          <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p class="light">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3>Automatizando Mais Tarefas</h3>
+          <p class="light">Se você esteve prestando atenção em tudo que foi escrito aqui, notou que parte do código não foi explicada anteriormente. Enquanto programava as tarefas para o Blog com Gulp senti a necessidade de que meus arquivos HTML fossem atualizados automaticamente a cada <b>save</b> que fazia. A partir dessa ideia (e após alguns testes) o código da task ficou assim:</p>
+          <pre><code class="language-javascript">gulp.task('html', function() {
+  gulp.src('*.html').pipe(livereload());
+});</code></pre>
+          <p class="light">Criei uma task com o nome <b>html</b> e pedi para ela atualizar com o LiveReload todos os arquivos com extensão <b>.html</b>. Fiz alterações na task watch também, para que a task <b>html</b> fosse invocada toda vez que o código fosse alterado e salvo:</p>
+          <pre><code class="language-javascript">gulp.task('watch', function() {
+  livereload.listen();
+  gulp.watch('**/*.html', ['html']);
+  gulp.watch('css/*.{sass,scss}', ['scss'] );
+});</code></pre>
+          <blockquote>
+            <p class="light">Os asteriscos antes do <b>.html</b> dentro da task são para que o Gulp observe tanto arquivos <b>.html</b> que se encontram na raiz do projeto como aqueles que se encontram dentro de qualquer pasta. Em resumo: qualquer arquivo <b>.html</b> que for alterado e salvo invocará a task <b>html</b> que fará com que a página seja recarregada automaticamente.</p>
+          </blockquote>
           <br>
+          <h3>Finalizando</h3>
+          <p class="light">O artigo foi apenas uma introdução, porém espero que ele tenha contribuido para o seu aprendizado e para sua produtividade como desenvolvedor. O potencial Gulp não para por aqui não. É capaz de automatizar várias outras incríveis tarefas que, exaustivamente, repetimos durante nosso dia-a-dia de trabalho. Cabe a nós, agora, buscarmos nos aprofundar mais na ferramenta e explorarmos tudo que ela tem a nos oferecer.</p>
+          <p class="light">Assim que adquirir mais conhecimentos a respeito de Gulp escreverei mais sobre a ferramenta no Blog e/ou no Medium.</p>
+          <p class="light">Por hoje é só! Um abraço, pessoal. Espero que vocês tenham gostado!</p>
+          <br>
+          <hr style="width: 15%;">
+          <div class="row">
+            <div class="col s1"><div id="mainimage"></div></div>
+            <div class="col offset-s2 s8">
+              <br>
+              <p class="light">
+                Técnico em Informática e Graduando em Análise e Desenvolvimento de Sistemas, ambos pelo IFRN, David, além de programador, é músico. Toca violão, piano, flauta e escaleta. Adora acampar, viajar, ler e estuda psicologia como hobbie nas horas vagas. <br> <br>
+                <a href="../about.html">Clique aqui para saber mais sobre mim.</a>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       <br><br>
