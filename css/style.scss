@@ -55,6 +55,10 @@ nav {
   @include border-radius(50%);
 }
 
+.img-rounded {
+  @include border-radius(50%);
+}
+
 ol {
   padding-left: 25px;
 }
