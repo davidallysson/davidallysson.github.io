@@ -59,6 +59,11 @@ nav {
   @include border-radius(50%);
 }
 
+.centralizar-img {
+  display: block;
+  margin: 0 auto;
+}
+
 ol {
   padding-left: 25px;
 }
