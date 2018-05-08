@@ -73,7 +73,7 @@
   <div class="container">
     <br>
     <div id="sobre" class="row text-center">
-      <div class="col-md-4">
+      <div class="col-lg-4">
         <div class="card card-profile">
             <div class="card-header card-header-image">
                 <img class="img" style="max-width: 50%;" src="assets/img/me-bg.jpg">
@@ -99,7 +99,7 @@
         </div>
       </div>
 
-      <div class="col-md-8">
+      <div class="col-lg-8">
         <div class="card card-profile">
           <h5 class="card-header card-header-danger">Conhecimentos</h5>
           <div class="card-body">
@@ -156,7 +156,7 @@
     </div> <!-- Fim da Row Sobre -->
     <br>
     <div id="portfolio" class="row">
-        <div class="col-md-8 ml-auto mr-auto">
+        <div class="col-lg-8 ml-auto mr-auto">
           <!-- Carousel Card -->
           <div class="card card-raised card-carousel">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -182,7 +182,7 @@
             </div>
           </div> <!-- End Carousel Card -->
         </div>
-        <div class="col-md-4">
+        <div class="col-lg-4">
           <div class="card card-nav-tabs">
             <h4 class="card-header card-header-danger text-center">Portfolio</h4>
             <div class="card-body">
@@ -199,7 +199,7 @@
     </div> <!-- Fim da Row Portfólio -->
     <br>
     <div id="contato" class="row">
-      <div class="col-md-4">
+      <div class="col-lg-6">
         <div class="card">
           <h4 class="card-header card-header-danger text-center">Contato</h4>
           <br>
@@ -239,6 +239,21 @@
           </form>
           <br>
         </div>
+      </div>
+      <div class="col-lg-6">
+
+        <!-- Carousel Card -->
+        <div class="card card-raised card-carousel">
+          <div id="myCarousel2" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/img/palestra.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Carousel Card -->
+
       </div>
     </div>
     <br>
@@ -283,6 +298,7 @@
 
     $(document).ready(function() {
       $("#myCarousel").flexisel;
+      $("#myCarousel2").flexisel;
       // materialKit.initFormExtendedDatetimepickers(); //inicializador do plugin DateTimePickers
       // materialKit.initSliders(); // inicializador do plugin Sliders
     });
